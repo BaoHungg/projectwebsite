@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- icon boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-2 bg-dark text-white p-4 ">
+            <h3 class="text-center"><span class="text-danger">Hugn</span><span>Shop</span></h3>
+            <hr>
+            <p><i class="bi bi-pie-chart-fill me-2"></i><a class="text-decoration-none text-white"
+                    href="adminDashboard.html">
+                    Quản lý thống kê</a></p>
+            <p><i class="bi bi-tag-fill me-2"></i><a class="text-decoration-none text-white" href="adminCate.html"> Quản
+                    lý
+                    danh mục</a></p>
+            <p><i class="bi bi-box-seam me-2"></i><a class="text-decoration-none text-white" href="adminProduct.html">
+                    Quản lý
+                    sản phẩm</a></p>
+            <p><i class="bi bi-people-fill me-2"></i><a class="text-decoration-none text-white" href="adminUser.html"> Quản lý
+                    người dùng</a></p>
+            <p><i class="bi bi-cart-fill me-2"></i><a class="text-decoration-none text-white" href="/order"> Quản lý đơn
+                    hàng</a></p>
+            <p><i class="bi bi-chat-left-text-fill me-2"></i><a class="text-decoration-none text-white"
+                    href="/feedback"> Quản lý bình luận</a></p>
+            <hr>
+            <div class="text-center">
+                <a href="" class="btn btn-danger">Đăng xuất</a>
+            </div>
+        </div>
+        <div class="col-md-10 p-0">
+            <div class="shadow bg-info text-white d-flex justify-content-between align-content-center  p-3 pb-1">
+                <p>TRANG QUẢN TRỊ WEBSITE HugnShop</p>
+                <div>
+                    <span><a class="link-light" href="index.html">Quay lại trang chủ</a></span>
+                </div>
+            </div>
+            <div class="row p-5">
+                <h1>Quản lí sản phẩm</h1>
+                <div>
+                    <button data-bs-toggle="modal" data-bs-target="#myModal-1" class="btn btn-secondary">Thêm sản phẩm
+                        mới</button>
+                </div>
+                <div class="modal" id="myModal-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Thêm sản phẩm</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3 mt-3">
+                                        <label for="name" class="form-label">Tên sản phẩm:</label>
+                                        <input type="text" class="form-control" id="productName"
+                                            placeholder="Nhập tên sản phẩm">
+
+                                    </div>
+
+                                    <div class="mb-3 mt-3">
+                                        <label for="price" class="form-label">Danh mục:</label>
+                                        <input type="text" class="form-control" id="productCategory"
+                                            placeholder="Nhập danh mục">
+
+                                    </div>
+
+                                    <div class="mb-3 mt-3">
+                                        <label for="price" class="form-label">Giá:</label>
+                                        <input type="text" class="form-control" id="productPrice"
+                                            placeholder="Nhập giá sản phẩm">
+
+                                    </div>
+                                    <div class="mb-3 mt-3">
+                                        <label for="name" class="form-label">Hình ảnh (URL):</label>
+                                        <input type="text" class="form-control" id="productImg"
+                                            placeholder="URL sản phẩm">
+
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="pwd" class="form-label">Mô tả:</label>
+                                        <input type="text" class="form-control" id="productDescription"
+                                            placeholder="Nhập mô tả sản phẩm">
+
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary" onclick="addProduct()">Thêm sản
+                                        phẩm</button>
+                                </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Sửa-->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Sửa sản phẩm</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3 mt-3">
+                                    <label for="name" class="form-label">Tên sản phẩm:</label>
+                                    <input type="text" class="form-control" id="editName">
+
+                                </div>
+
+                                <div class="mb-3 mt-3">
+                                    <label for="price" class="form-label">Danh mục:</label>
+                                    <input type="text" class="form-control" id="editCategory">
+
+                                </div>
+
+                                <div class="mb-3 mt-3">
+                                    <label for="price" class="form-label">Giá:</label>
+                                    <input type="text" class="form-control" id="editPrice">
+
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <label for="name" class="form-label">Hình ảnh (URL):</label>
+                                    <input type="text" class="form-control" id="editImg">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pwd" class="form-label">Mô tả:</label>
+                                    <input type="text" class="form-control" id="editDescription">
+
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" onclick="updateProduct(event)">Sửa sản
+                                    phẩm</button>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end Sửa-->
+            <input type="text" id="search" placeholder="Tìm kiếm" onkeyup="searchProduct(event)">
+            <div class="row p-5" id="showSP">
+
+            </div>
+
+        </div>
+        <!-- Footer -->
+        <div class="bg-info text-white text-center p-2">
+            <p>@2024 by Nguyễn Bảo Hưng</p>
+        </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</html>

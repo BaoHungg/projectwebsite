@@ -1,0 +1,208 @@
+{
+  "cart": [
+    {
+      "id": "ba0b",
+      "productId": "00e3",
+      "name": "Balo Yame ver3",
+      "price": "349000",
+      "image": "https://cdn2.yame.vn/pimg/balo-daily-khoi-nguyen-9-0022423/3922a902-4146-2100-e894-001a7b3b290a.jpg?w=540&h=756",
+      "quantity": "1"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Áo"
+    },
+    {
+      "id": "2",
+      "name": "Quần"
+    },
+    {
+      "id": "3",
+      "name": "Balo"
+    },
+    {
+      "id": "4",
+      "name": "Nón"
+    }
+  ],
+  "products": [
+    {
+      "name": "Áo Thun",
+      "price": "149000",
+      "image": "https://cdn2.yame.vn/pimg/ao-thun-co-tron-y-nguyen-ban-18-ver112-0021384/7d8828c1-c0c8-3701-6bc8-00196db82e05.jpg?w=540&h=756",
+      "category": "Áo",
+      "description": "Áo thun là một loại trang phục đơn giản nhưng phổ biến, thường được làm từ vải cotton co giãn. Thiết kế của áo thun thường đơn giản với cổ tròn hoặc cổ V và có thể có nhiều màu sắc và họa tiết khác nhau",
+      "id": "e2bb",
+      "quantity": 10
+    },
+    {
+      "name": "Quần Short",
+      "price": "229000",
+      "image": "https://cdn2.yame.vn/pimg/quan-short-linh-vat-bbuff-ver1-0020423/a215de59-8e5e-1d00-4df7-001927364da5.jpg?w=540&h=756",
+      "category": "Quần",
+      "description": "Quần short là một loại quần ngắn thường dừng ở mức đùi hoặc trên đùi, được thiết kế để mang lại sự thoải mái và tiện lợi cho người mặc",
+      "id": "a656",
+      "quantity": 15
+    },
+    {
+      "name": "Balo Yame",
+      "price": "357000",
+      "image": "https://cdn2.yame.vn/pimg/balo-small-y-nguyen-ban-ver6-0021286/a8ee2ff3-47e5-b801-dd98-00195d395201.jpg?w=540&h=756",
+      "category": "Balo",
+      "description": "Balo là một loại túi lớn được thiết kế để đeo trên vai hoặc lưng, thường có dây đeo điều chỉnh để phù hợp với người sử dụng. Balo thường được sử dụng để mang đồ đạc cá nhân như sách vở, laptop, quần áo, hoặc các vật dụng cá nhân khác khi đi học, đi làm, hoặc du lịch.",
+      "id": "e35c",
+      "quantity": 20
+    },
+    {
+      "name": "Balo Gucci",
+      "price": "285000",
+      "image": "https://cdn2.yame.vn/pimg/balo-daily-khoi-nguyen-10-0022428/655cea50-f9b8-2e00-e081-001a7b3c5fea.jpg?w=540&h=756",
+      "category": "Balo",
+      "description": "Balo Daily Phụ Kiện Khởi Nguyên 11",
+      "id": "39f3",
+      "quantity": 20
+    },
+    {
+      "name": "Áo Thun Outlet",
+      "price": "370000",
+      "price-discount": "349000",
+      "image": "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-ngan-ha-space-ver14-0020549/2bf92776-c159-0200-0f1f-001a1db2205a.jpg?w=540&h=756",
+      "category": "Áo",
+      "description": "Áo Thun Cổ Tròn Tay Ngắn Vải Cotton 2 Chiều Thấm Hút Biểu Tượng Dáng Vừa Đơn Giản Space Ver14",
+      "id": "e970",
+      "quantity": 20
+    },
+    {
+      "name": "Áo Thun Ver1",
+      "price": "299000",
+      "image": "https://cdn2.yame.vn/pimg/ao-thun-co-tron-on-gian-than-co-ai-horus-ver8-0021258/1550894c-c1e4-3201-3f1e-001957ba87cb.jpg?w=540&h=756",
+      "category": "Áo",
+      "description": "Áo Thun Cổ Tròn Tay Ngắn Vải Cotton 2 Chiều Thấm Hút Biểu Tượng Dáng Vừa Đơn Giản Space Ver14",
+      "id": "1594",
+      "quantity": 20
+    },
+    {
+      "name": "Quần Tây",
+      "price": "499000",
+      "price-discount": "300000",
+      "image": "https://cdn2.yame.vn/pimg/quan-tay-toi-gian-m3-0021221/a0be1a54-ceaa-3000-283c-001a19fd3e6f.jpg?w=540&h=756",
+      "category": "Quần",
+      "description": "Quần Tây Sợi Tự Nhiên Co Giãn Cấp Độ 1 Trơn Dáng Vừa Đơn Giản Gu Tối Giản M3",
+      "id": "fe2e",
+      "quantity": 20
+    },
+    {
+      "name": "Áo Khoác Kaki",
+      "price": "130000",
+      "image": "https://cdn2.yame.vn/pimg/ao-khoac-la-co-y-nguyen-ban-18--ver39-0021147/c841c091-5cbd-c700-4e47-001999bb2014.jpg?w=540&h=756",
+      "category": "Áo",
+      "description": "Áo Khoác Không Nón Vải Dù Chống Nắng Phối Màu Dáng Rộng BST Thiết Kế Y2010 Originals Ver39",
+      "id": "2600",
+      "quantity": 20
+    },
+    {
+      "name": "Quần Jean Cotton",
+      "price": "341000",
+      "image": "https://cdn2.yame.vn/pimg/quan-jean-slimfit-on-gian-b35-0021662/4645fdf0-0db0-4900-6c8a-001a1de6fbe3.jpg?w=540&h=756",
+      "category": "Quần",
+      "description": "Quần Jean Slimfit Đơn Giản B35",
+      "id": "e0b4",
+      "quantity": 20
+    },
+    {
+      "id": "a9fe",
+      "name": "Quần Short Xám",
+      "category": "Quần",
+      "price": "180000",
+      "image": "https://cdn2.yame.vn/pimg/quan-short-on-gian-y-nguyen-ban-ver21-0020991/c5950d25-729c-0100-0fbb-001a1f70cc96.jpg?w=540&h=756",
+      "description": "Quần Short Lưng Thun Trên Gối Vải Denim Nhanh Khô Trơn Dáng Rộng Đơn Giản Y2010 Originals Ver21",
+      "quantity": 20
+    },
+    {
+      "name": "Quần Jogger",
+      "price": "160000",
+      "image": "https://cdn2.yame.vn/pimg/quan-dai-jogger-on-gian-y-nguyen-ban-ver9-0020733/bb3f1d33-9df7-0600-12bc-001a2017d47b.jpg?w=540&h=756",
+      "category": "Quần",
+      "description": "Quần Dài Jogger Đơn Giản Y Nguyên Bản Ver9",
+      "id": "070a",
+      "quantity": 20
+    },
+    {
+      "name": "Balo Yame ver2",
+      "price": "199000",
+      "image": "https://cdn2.yame.vn/pimg/balo-modern-nguyen-ban-m7-0022323/a0c28515-1375-0100-b059-001a9eca773f.jpg?w=540&h=756",
+      "category": "Balo",
+      "description": " Chất liệu: 900D PVC + Lót 210D",
+      "id": "48fa",
+      "quantity": 20
+    },
+    {
+      "id": "00e3",
+      "name": "Balo Yame ver3",
+      "category": "Balo",
+      "price": "349000",
+      "image": "https://cdn2.yame.vn/pimg/balo-daily-khoi-nguyen-9-0022423/3922a902-4146-2100-e894-001a7b3b290a.jpg?w=540&h=756",
+      "description": " Chất liệu: 900D PVC + Lót 210D",
+      "quantity": 20
+    },
+    {
+      "name": "Balo Canvas",
+      "price": "429000",
+      "price-discount": "329000",
+      "image": "https://cdn2.yame.vn/pimg/balo-vintage-mien-gio-cat-02-0022563/e902d713-bbc5-8c00-558f-001ab244cd85.jpg?w=540&h=756",
+      "category": "Balo",
+      "description": "Thành phần: 65% Polyester 35% Cotton",
+      "id": "8a3c",
+      "quantity": 20
+    },
+    {
+      "id": "04af",
+      "name": "Áo Polo Cotton",
+      "category": "Áo",
+      "price": "228000",
+      "image": "https://cdn2.yame.vn/pimg/ao-thun-co-tru-on-gian-ngan-ha-space-ver19-0020806/afbfd5fa-e03a-0300-abe1-001a1e912272.jpg?w=540&h=756",
+      "description": "Áo Thun Cổ Trụ Đơn Giản Ngân Hà Space Ver19",
+      "quantity": 20
+    },
+    {
+      "id": "8393",
+      "name": "Nón Vải Cotton",
+      "category": "Nón",
+      "price": "110000",
+      "image": "https://cdn2.yame.vn/pimg/pktt-non-the-days-eye-17-0022059/d1b481d1-d01e-1100-e0d8-001a44362374.jpg?w=540&h=756",
+      "description": "Kaki dày dặn, mang lại độ bền cũng như tạo form mũ cứng và đẹp mắt.",
+      "quantity": 20
+    },
+    {
+      "name": "Nón Vải Cotton Ver3",
+      "price": "120000",
+      "price-discount": "100000",
+      "image": "https://cdn2.yame.vn/pimg/pktt-non-di-san-valknut-ver1-0022319/c5d61ec2-6553-4000-9fef-001a75bbb1b3.jpg?w=540&h=756",
+      "category": "Nón",
+      "description": "Kaki dày dặn, mang lại độ bền cũng như tạo form mũ cứng và đẹp mắt.",
+      "id": "8a58"
+    }
+  ],
+  "users": [
+    {
+      "id": "b46e",
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "fddc",
+      "username": "hoangngu",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "3a0b",
+      "username": "justibadboy123",
+      "password": "123",
+      "role": "admin"
+    }
+  ]
+}

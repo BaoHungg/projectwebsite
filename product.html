@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #searchProductHome {
+        margin-left: 100px;
+    }
+
+    .buttonSort-wrap {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    .buttonSort {
+        padding: 8px 16px;
+        font-size: 16px;
+        background-color: #747874;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+
+    .buttonSort:active {
+        background-color: #b0bcb0;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="header-box">
+            <div class="header-start">
+                <div class="header-img">
+                    <a href="index.html"><img src="img/logo.png" alt="" width="130px"></a>
+                </div>
+            </div>
+            <div class="header-middle">
+                <div class="header-middle-nav1">
+                    <a href="index.html">TRANG CHỦ </a>
+                </div>
+                <div class="header-middle-nav2">
+                    <a href="">SẢN PHẨM </a>
+                </div>
+                <div class="header-middle-nav3">
+                    <a href="#">VỀ CHÚNG TÔI</a>
+                </div>
+            </div>
+            <div class="header-end">
+                <div class="header-end-left"></div>
+                <div class="header-end-right">
+
+                    <div class="header-users">
+                        <a href="dangnhap.html"><i class="fa-regular fa-user fa-lg"></i></a>
+                    </div>
+                    <div class="header-cart">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Tất cả sản phẩm</h1>
+    <div class="search">
+        <input type="text" id="searchProductHome" placeholder="Nhập tên sản phẩm..." onkeyup="searchProductHome(event)">
+    </div>
+    <div class="buttonSort-wrap">
+        <button id="sortAscButton" class="buttonSort">Sắp xếp giá tăng dần</button>
+        <button id="sortDescButton" class="buttonSort">Sắp xếp giá giảm dần</button>
+    </div>
+
+    <div id="allproduct">
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>HugnShop</h3>
+                    <p>Nguyễn Bảo Hưng - PS29581</p>
+                    <p>FPT POLYTECHNIC HCM - K18.3</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Liên Kết</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color: #74C0FC;"></i>FaceBook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-tiktok fa-2xl" style="color: #74C0FC;"></i></a>TikTok</li>
+                        <li><a href="#"><i class="fa-brands fa-github fa-2xl" style="color: #74C0FC;"></i></a>GitHub</li>
+                        <li><a href="#"><i class="fa-brands fa-youtube fa-2xl" style="color: #74C0FC;"></i></a>Youtube</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Địa Chỉ</h3>
+                    <p>225 Trần Thị Cờ, Quận 12, TP HCM</p>
+                    <p>Email: hungnbps29581@fpt.edu.vn</p>
+                    <p>Phone: 0363321767</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="app.js"></script>
+
+</html>

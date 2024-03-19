@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<style>
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+    }
+
+    img,
+    picture,
+    svg,
+    video {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        background-color: transparent;
+        outline: none;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        border: 0;
+    }
+
+    body {
+        min-height: 90vh;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    body {
+        background-image: url('https://kynguyenlamdep.com/wp-content/uploads/2020/04/ban-lam-viec.jpg');
+        background-size: cover;
+        /* Đảm bảo hình ảnh nền phủ toàn bộ kích thước của trình duyệt */
+        background-position: center;
+        /* Đặt vị trí của hình ảnh nền ở giữa trang */
+        background-repeat: no-repeat;
+        /* Ngăn lặp lại hình ảnh nền */
+    }
+
+    .login {
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 350px;
+        width: 350px;
+        flex-direction: column;
+        gap: 35px;
+        background: #e3e3e3;
+        box-shadow: 16px 16px 32px #c8c8c8,
+            -16px -16px 32px #fefefe;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+
+    .card a {
+        text-decoration: none;
+    }
+
+    .inputBox {
+        position: relative;
+        width: 250px;
+    }
+
+    .inputBox input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: none;
+        color: #000;
+        font-size: 1em;
+        background: transparent;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+        transition: 0.1s;
+        border-bottom-left-radius: 8px;
+    }
+
+    .inputBox span {
+        margin-top: 5px;
+        position: absolute;
+        left: 0;
+        transform: translateY(-4px);
+        margin-left: 10px;
+        padding: 10px;
+        pointer-events: none;
+        font-size: 12px;
+        color: #000;
+        text-transform: uppercase;
+        transition: 0.5s;
+        letter-spacing: 3px;
+        border-radius: 8px;
+    }
+
+    .inputBox input:valid~span,
+    .inputBox input:focus~span {
+        transform: translateX(113px) translateY(-15px);
+        font-size: 0.8em;
+        padding: 5px 10px;
+        background: #000;
+        letter-spacing: 0.2em;
+        color: #fff;
+        border: 2px;
+    }
+
+    .inputBox input:valid,
+    .inputBox input:focus {
+        border: 2px solid #000;
+        border-radius: 8px;
+    }
+
+    .enter {
+        height: 45px;
+        width: 100px;
+        border-radius: 5px;
+        border: 2px solid #000;
+        cursor: pointer;
+        background-color: transparent;
+        transition: 0.5s;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 1em;
+    }
+
+    .enter:hover {
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <a class="login">Đăng nhập</a>
+            <div class="inputBox">
+                <input id="userName" type="text" required="required">
+                <span class="user">Tài khoản</span>
+            </div>
+
+            <div class="inputBox">
+                <input id="passWord" type="password" required="required">
+                <span>Mật khẩu</span>
+            </div>
+
+            <button id="loginButton" class="enter" onclick="login()">Đăng nhập</button>
+            <a href="dangky.html">Bạn chưa có tài khoản ? </a>
+        </div>
+
+    </div>
+</body>
+<script>
+    login = () => {
+        let userName = document.querySelector("#userName").value;
+        let passWord = document.querySelector("#passWord").value;
+
+        if (!userName || !passWord) {
+            alert('Vui lòng nhập đủ thông tin');
+            return;
+        }
+
+        axios.get("http://localhost:3000/users", {
+            params: {
+                username: userName,
+                password: passWord
+            }
+        }).then(res => {
+            if (res.data.length > 0) {
+                const user = res.data[0]; // Lấy thông tin người dùng đầu tiên từ phản hồi
+                if (user.role === "admin") {
+                    alert("Đăng nhập thành công");
+                    window.location.href = "adminDashboard.html"; // Điều hướng đến trang adminDashboard.html nếu là admin
+                } else if (user.role === "user") {
+                    alert("Đăng nhập thành công");
+                    window.location.href = "index.html"; // Điều hướng đến trang index.html nếu là user
+                } else {
+                    alert("Không xác định được tài khoản");
+                }
+            } else {
+                alert("Tài khoản hoặc mật khẩu không đúng");
+            }
+        }).catch(error => {
+            console.error("Error:", error);
+        });
+    }
+
+
+</script>
+
+</html>
